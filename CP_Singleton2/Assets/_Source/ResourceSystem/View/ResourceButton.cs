@@ -2,14 +2,17 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using Core;
+using UISystem;
 
 namespace ResourceSystem.View
 {
     [RequireComponent (typeof (Button))]
     public class ResourceButton : MonoBehaviour
     {
+        [Header("References")]
         [SerializeField] private ResourceType resourceType;
         [SerializeField] private Image resourceIcon;
+        [SerializeField] private SecondLeftText secondsText;
         
         private float _enableTime;
         private float _disableTime;
@@ -34,7 +37,11 @@ namespace ResourceSystem.View
         {
             _button.onClick.RemoveAllListeners();
             _button.enabled = false;
-            yield return new WaitForSeconds(_enableTime);
+            for (int i = (int)_enableTime; i > 0; i--)
+            {
+                secondsText.ChangeSeconds(i);
+                yield return new WaitForSeconds(1);
+            }
             StartCoroutine(EndTime());
         }
         IEnumerator EndTime()
@@ -42,7 +49,11 @@ namespace ResourceSystem.View
             ResourceViewService.Instance.SetDisabledIcon(resourceIcon, resourceType);
             _button.onClick.AddListener(StartFirstCorutine);
             _button.enabled = true;
-            yield return new WaitForSeconds(_disableTime);
+            for (int i = (int)_disableTime; i > 0; i--)
+            {
+                secondsText.ChangeSeconds(i);
+                yield return new WaitForSeconds(1);
+            }
             StopAllCoroutines();
             _button.onClick.RemoveAllListeners();
             _button.enabled = false;
