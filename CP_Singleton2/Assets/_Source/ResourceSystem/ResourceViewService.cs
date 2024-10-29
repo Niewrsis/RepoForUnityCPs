@@ -28,6 +28,10 @@ namespace ResourceSystem
                 if(_viewData == null)
                 {
                     _viewData = Resources.Load("ResourceViewData") as ResourceViewDataSO;
+                    if (RecourceLoader.Instance.TryGerResource(out ResourceViewDataSO data))
+                    {
+
+                    }
                 }
                 return _viewData;
             }
