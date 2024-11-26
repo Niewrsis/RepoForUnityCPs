@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55ca702e0ee263c4ea4209f62512a3da, type: 3}
+  m_Name: Formulas
+  m_EditorClassIdentifier: 
+  DisplacmentFormula: AB<sup>2</sup> = AC<sup>2</sup> + BC<sup>2</sup>
+  DisplacmentParametr1: AC
+  DisplacmentParametr2: BC
+  UniversalGravitationFormula: '<line-height=50%><pos=20%><u>Gm<sub>1</sub>m<sub>2</sub></u>
+
+    <pos=-40%>F
+    =
+
+    <pos=20%>r<sup>2</sup>'
+  UniversalGravitationParametr1: m<sub>1</sub>
+  UniversalGravitationParametr2: m<sub>2</sub>
+  UniversalGravitationParametr3: r
+  FrictionForceFormula: "F = \u03BCmg"
+  FrictionForceParametr1: "\u03BC"
+  FrictionForceParametr2: m
+  BodyDensityFormula: "<line-height=50%><pos=20%><u>m</u>\n<pos=-10%>\u03C1 =\n<pos=20%>\u041C"
+  BodyDensityParametr1: m
+  BodyDensityParametr2: V
+  OhmLawFormula: '<line-height=50%><pos=20%><u>R</u>
+
+    <pos=-10%>I =
+
+    <pos=20%>R'
+  OhmLawParametr1: U
+  OhmLawParametr2: R
