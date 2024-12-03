@@ -30,7 +30,7 @@ MonoBehaviour:
   BodyDensityFormula: "<line-height=50%><pos=20%><u>m</u>\n<pos=-10%>\u03C1 =\n<pos=20%>\u041C"
   BodyDensityParametr1: m
   BodyDensityParametr2: V
-  OhmLawFormula: '<line-height=50%><pos=20%><u>R</u>
+  OhmLawFormula: '<line-height=50%><pos=20%><u>U</u>
 
     <pos=-10%>I =
 
